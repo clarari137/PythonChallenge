@@ -1,4 +1,3 @@
-# read in budget__data.csv, skip header
 import os
 import csv
 
@@ -11,6 +10,7 @@ incdec = []
 csvpath = os.path.join('Resources','budget_data.csv')
 outpath = os.path.join('Analysis', 'pybank_output.txt')
 
+# read in budget__data.csv, initialize output file, skip header
 with open(outpath, 'w') as outfile:
     outfile.write("PyBank Financial analysis\n ---------------------------------------\n")
 
@@ -35,20 +35,18 @@ with open(outpath, 'w') as outfile:
             difference = profits[x]-profits[x-1]
             incdec.append(difference)
         
-        #Print final answers
-    print(len(months))
-    print(total)
-    print(dif)
-    print(avg)
-    print(f'{months[incdec.index(int(max(incdec)))+1]} ({max(incdec)})')
-    print(f'{months[incdec.index(int(min(incdec)))+1]} ({min(incdec)})')
+    #Print final answers
+    print(f'Total months in dataset: {len(months)}')
+    print(f'Total profits/losses over the period: ${total}')
+    print(f'Change in profits/losses: ${dif}')
+    print(f'Average change: ${avg:.2f}')
+    print(f'Greatest increase: {months[incdec.index(int(max(incdec)))+1]} (${max(incdec)})')
+    print(f'Greatest decrease: {months[incdec.index(int(min(incdec)))+1]} (${min(incdec)})')
                 
-        #Compile final answers in txt file
+    #Compile final answers in txt file
     outfile.write(f'Total months in dataset: {len(months)}\n')
     outfile.write(f'Total profits/losses over the period: ${total}\n')
     outfile.write(f'Change in profits/losses: ${dif}\n')
     outfile.write(f'Average change: ${avg:.2f}\n')
     outfile.write(f'Greatest increase: {months[incdec.index(int(max(incdec)))+1]} (${max(incdec)})\n')
     outfile.write(f'Greatest decrease: {months[incdec.index(int(min(incdec)))+1]} (${min(incdec)})')
-
-        
