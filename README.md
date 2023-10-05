@@ -14,6 +14,7 @@ calculations:
    from this new list we can use the max/min method from https://www.w3schools.com/python/ref_func_max.asp
 
 PyPoll
+
 read in csv same as PyBank
 
 calculations:
