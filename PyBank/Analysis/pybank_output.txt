@@ -1,0 +1,8 @@
+PyBank Financial analysis
+ ---------------------------------------
+Total months in dataset: 86
+Total profits/losses over the period: $22564198
+Change in profits/losses: $-706444
+Average change: $-8311.11
+Greatest increase: Aug-16 ($1862002)
+Greatest decrease: Feb-14 ($-1825558)
