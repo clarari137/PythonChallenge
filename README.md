@@ -27,8 +27,9 @@ calculations:
 
 I used nested 'with' loops to print all outputs to a new file, 'outfile' with the command outfile.write(). This code came from the 09-Ins_Reading_Writing_CSV section of class.
 
-Other sources used for documentation:
-# https://docs.python.org/3/tutorial/datastructures.html
-# https://stackoverflow.com/questions/74557297/f-string-with-percent-and-fixed-decimals
-# https://www.w3schools.com/python/ref_func_print.asp
-# https://stackoverflow.com/questions/2918362/writing-string-to-a-file-on-a-new-line-every-time
+Other sources:
+I attended a tutoring session to talk through the nested 'with' loops and the structure of the README, along with other small clarifying questions. The links below I used to see the documentation for some commands and methods, or to find which arguments a function accepted. 
+- https://docs.python.org/3/tutorial/datastructures.html
+- https://stackoverflow.com/questions/74557297/f-string-with-percent-and-fixed-decimals
+- https://www.w3schools.com/python/ref_func_print.asp
+- https://stackoverflow.com/questions/2918362/writing-string-to-a-file-on-a-new-line-every-time
