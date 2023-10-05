@@ -1,6 +1,6 @@
-## PythonChallenge
+# PythonChallenge
 
-# PyBank 
+## PyBank 
 
 read in & skip header using code from cereal.py, class 3, 01-Evr_CerealCleaner
 
@@ -13,7 +13,7 @@ calculations:
 6. loop through the list of profit/losses, making a new list containing the difference between the profit one month and the profit the month before.
    from this new list we can use the max/min method from https://www.w3schools.com/python/ref_func_max.asp
 
-PyPoll
+## PyPoll
 
 read in csv same as PyBank
 
