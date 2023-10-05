@@ -1,4 +1,3 @@
-# read in election_data.csv
 import os
 import csv
 
@@ -14,8 +13,7 @@ candidate_name = []
 csvpath = os.path.join('Resources','election_data.csv')
 outpath = os.path.join('Analysis', 'pypoll_output.txt')
 
-# need nested with so that I can write to the ouput document?
-
+# read in election_data.csv and initiate output file
 with open(outpath, 'w') as outfile:
     outfile.write("PyPoll Election Results\n-------------------------\n")
 
@@ -32,9 +30,8 @@ with open(outpath, 'w') as outfile:
         outfile.write(f'Total votes cast: {len(voterid)}\n' '-------------------------\n')
         print(f'Total votes cast: {len(voterid)}')
 
-    # outside of the for loop so it doesn't run forever
-    # first sort alphabetically (link from BCS)
-    # then append first candidate to list
+    # first sort alphabetically
+    # append first candidate to list
     # run through each candidate in the list and add to filtered list
     # print filtered list
         candidates.sort()  
@@ -47,12 +44,12 @@ with open(outpath, 'w') as outfile:
             # percent votes won
             # total votes won
         for fc in filtered_cand:
-        # for i in range(0,len(filtered_cand)):
             for candi in candidates:
                 if fc == candi:
                     candidate_votes += 1
             outfile.write(f"{fc}: {int(candidate_votes)/int(len(voterid)):.3%}, ({candidate_votes})\n")
             print(f"{fc}: {int(candidate_votes)/int(len(voterid)):.3%}, ({candidate_votes})")
+          
             # Winner
             if candidate_votes > winner_votes:
                 winner_votes = candidate_votes
